@@ -21,7 +21,7 @@ public class ContaBancaria implements OperacoesConta {
 
     @Override
     public void sacar(double valor) {
-        if (saldo <= valor) {
+        if (saldo >= valor) {
             saldo -= valor;
             System.out.println("Saldo atual: " + saldo);
         }
@@ -36,7 +36,11 @@ public class ContaBancaria implements OperacoesConta {
     }
 
     // Metodo para tarnsferir
-    public void transferir(double valor, ContaBancaria contaBancaria) {
-
+    @Override
+    public double transferir(ContaBancaria contaBancaria, double valor) {
+        return 0;
     }
+
+
+
 }

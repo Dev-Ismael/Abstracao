@@ -1,5 +1,6 @@
 import Exercicio.Exibivel;
 import Exercicio.Produto;
+import Exercicio2.ContaBancaria;
 import formas.FormaGeometrica;
 import formas.Quadrado;
 
@@ -14,6 +15,12 @@ public class Main {
 
         Exibivel prod1 = new Produto("i30", 55000, "Hyundai");
         prod1.mostrarDetalhes();
+
+        ContaBancaria conta = new ContaBancaria("555555", 3500);
+        conta.consultarSaldo();
+
+        conta.sacar(500);
+        conta.consultarSaldo();
 
 
     }
